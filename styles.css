@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+.producto img {
+    width: 80%;
+    height: 47%;
+}
+
+.body img {
+    width: 250%;
+    height: 170%;
+}
+
+button {
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkgreen;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    padding-top: 80px; /* Compensa el menú fijo */
+    font-family: sans-serif;
+}
+
+/* Menú fijo */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #343a40; /* Color oscuro bonito */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Color de texto blanco para que se vea */
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* Carrusel */
+.carousel {
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    margin: 2rem auto;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.img-fluid {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+main h1,
+main p {
+    text-align: center;
+}
+
+.imagenes-con-texto {
+    gap: 30px; /* espacio entre imagen y texto */
+    text-align: center;
+    flex-wrap: wrap; /* hace que se acomode en pantallas pequeñas */
+  }
+  
+  /* Tamaño personalizado y uniforme para ambas imágenes */
+  .img-custom {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Texto centrado vertical y horizontalmente */
+  .texto-central {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+body img{
+    width: 500px;
+    height: 300px;
+}

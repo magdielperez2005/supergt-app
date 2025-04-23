@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Supermercado</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>BEBIDAS</h1>
+    <div class="productos">
+        <div class="producto">
+            <img src="img/bebidas/aguasalvavidas.webp" alt="Agua Salvavidas">
+            <h2>Agua Salvavidas</h2>
+            <p>Q5</p>
+            <button onclick="agregarAlCarrito('Agua Salvavidas', 5)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/bebidas/coca-cola.png" alt="Cocacola">
+            <h2>Cocacola</h2>
+            <p>Q8</p>
+            <button onclick="agregarAlCarrito('Cocacola', 8)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/bebidas/jugodelagranja.webp" alt="Jugo de la Granja">
+            <h2>Jugo de la Granja</h2>
+            <p>Q8</p>
+            <button onclick="agregarAlCarrito('Jugo de la Granja', 8)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/frutal.jpg" alt="Jugo del Frutal Manzana">
+            <h2>Jugo del Frutal Manzana</h2>
+            <p>Q4.50</p>
+            <button onclick="agregarAlCarrito('Jugo del Frutal Manzana', 4.50)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/bebidas/jugopiña.webp" alt="Jugo del Frutal Piña">
+            <h2>Jugo del Frutal Piña</h2>
+            <p>Q4.50</p>
+            <button onclick="agregarAlCarrito('Jugo del Frutal Piña', 4.50)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/frutal.jpg" alt="Jugo del Frutal Melocoton">
+            <h2>Jugo del Frutal Melocoton</h2>
+            <p>Q4.50</p>
+            <button onclick="agregarAlCarrito('Jugo del Frutal Melocoton', 4.50)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/bebidas/REDBULL.webp" alt="Red Bull">
+            <h2>Red Bull</h2>
+            <p>Q11</p>
+            <button onclick="agregarAlCarrito('Red Bull', 11)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/bebidas/raptor.webp" alt="Raptor">
+            <h2>Raptor</h2>
+            <p>Q8.50</p>
+            <button onclick="agregarAlCarrito('Raptor', 8.50)">Agregar al carrito</button>
+        </div>
+    </div>
+    <h1>GOLOSINAS</h1>
+    <div class="productos">
+        <div class="producto">
+            <img src="img/golosinas/lays.webp" alt="Lays">
+            <h2>Lays</h2>
+            <p>Q5</p>
+            <button onclick="agregarAlCarrito('Lays', 5)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/golosinas/dorito.jpg" alt="Doritos">
+            <h2>Doritos</h2>
+            <p>Q8</p>
+            <button onclick="agregarAlCarrito('Doritos', 8)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/golosinas/GRUJITOS.webp" alt="Grujitos">
+            <h2>Grujitos</h2>
+            <p>Q8</p>
+            <button onclick="agregarAlCarrito('Grujitos', 8)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/golosinas/CHICHARRONES SEÑORIALES.webp" alt="Chicharrones Señorial">
+            <h2>Chicharrones Señorial</h2>
+            <p>Q4.50</p>
+            <button onclick="agregarAlCarrito('Chicharrones Señorial', 4.50)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/golosinas/CHETOS.webp" alt="chetos">
+            <h2>chetos</h2>
+            <p>Q4.50</p>
+            <button onclick="agregarAlCarrito('chetos ', 4.50)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/golosinas/GALLETAS CHOKIS.png" alt="Galletas Chokis">
+            <h2>Galletas Chokis</h2>
+            <p>Q4.50</p>
+            <button onclick="agregarAlCarrito('Galletas Chokis', 4.50)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/golosinas/GALLETAS ARCOIRIS.png" alt="Galletas Arcoiris">
+            <h2>Galletas Arcoiris</h2>
+            <p>Q11</p>
+            <button onclick="agregarAlCarrito('Galletas Arcoiris', 11)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/golosinas/Nachos.webp" alt="Nachos">
+            <h2>Nachos</h2>
+            <p>Q8.50</p>
+            <button onclick="agregarAlCarrito('Nachos', 8.50)">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            alert(nombre + " agregado al carrito.");
+        }
+    </script>
+</body>
+</html>
