@@ -38,26 +38,6 @@ function eliminarDelCarrito(index) {
 
 function finalizarCompra(event) {
     event.preventDefault();
-    
-
-    const nombreCliente = document.getElementById("nombre").value.trim();
-    
-
-    if (nombreCliente === "") {
-        alert("Por favor, ingrese su nombre antes de finalizar la compra.");
-        return;
-    }
-    
-
-    alert(`Gracias por su compra ${nombreCliente}. Su pedido estará llegando lo más pronto posible.`);
-    
-
-    localStorage.removeItem("carrito");
-    actualizarCarrito();
-}
-
-function finalizarCompra(event) {
-    event.preventDefault();
 
     const nombre = document.getElementById("nombre").value.trim();
     const telefono = document.getElementById("telefono").value.trim();
@@ -71,7 +51,7 @@ function finalizarCompra(event) {
 
     const datos = { nombre, telefono, direccion, total };
 
-    fetch("https://supergt-app.onrender.com", {
+    fetch("https://supergt-app.onrender.com/comprar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datos),
@@ -79,8 +59,9 @@ function finalizarCompra(event) {
     .then(response => response.text())
     .then(mensaje => {
         alert(`Gracias por su compra, ${nombre}. Su pedido estará llegando pronto.`);
-        localStorage.removeItem("carrito");  // Limpiar carrito
-        actualizarCarrito();  // Esto debe actualizar la vista del carrito
+        localStorage.removeItem("carrito");
+        actualizarCarrito();
     })
     .catch(error => console.error("Error:", error));
 }
+
