@@ -71,7 +71,7 @@ function finalizarCompra(event) {
 
     const datos = { nombre, telefono, direccion, total };
 
-    fetch("http://localhost:3000/comprar", {
+    fetch("https://supergt-app.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datos),
