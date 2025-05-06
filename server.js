@@ -36,7 +36,7 @@ app.post("/comprar", async (req, res) => {
     }
 });
 
-// Puerto dinámico para Render
+// Puerto dinámico para Render o local
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
